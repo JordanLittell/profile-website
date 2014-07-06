@@ -94,24 +94,71 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   MY STYLING
    ========================================================================== */
 
 
+body{
+    background:url('../img/city.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
 
 
+/* ==========================================================================
+   NAVIGATION STYLING 
+   ========================================================================== */
+nav{
+    position: fixed;
+    top:0px;
+    padding: 20px 0 5px 0;
+    width: 100%;
+    margin:0;
+    background-color: black;
+}
+nav ul{
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 25%;
+    width: 50%;
+}
+nav li{
+    color:#ACACAC;
+    float:left;
+    margin: 0 5%;
+}
+nav a{
+    display: inline;
+    text-decoration: none;
+}
+nav li:hover{
+    color: white;
+}
+nav a{
+    color: white;
+}
+nav:after{
+    position: relative;
+    clear:both;
+}
 
+/* ==========================================================================
+   CONTAINER AND SECTIONS
+   ========================================================================== */
 
-
-
-
-
-
-
-
-
-
-
+#container{
+    margin: 10% 5%;
+}
+section{
+    padding: 5px;
+    margin:5% 0;
+    background-color: #303030;
+    color: #E0E0E0;
+    border-radius: 5px;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+}
 
 /* ==========================================================================
    Helper classes
