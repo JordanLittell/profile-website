@@ -99,11 +99,12 @@ textarea {
 
 
 body{
-    background:url('../img/city.jpg') no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
+  
 }
-
+h1,h2,h3,h4,h5,h6{
+    color: white;
+    font-weight: 100;
+}
 
 /* ==========================================================================
    NAVIGATION STYLING 
@@ -115,18 +116,22 @@ nav{
     width: 100%;
     margin:0;
     background-color: black;
+    text-align: center;
 }
 nav ul{
     list-style: none;
     display: inline-block;
     text-decoration: none;
-    margin: 0 25%;
     width: 50%;
+    float: right;
+    padding: 0;
 }
 nav li{
     color:#ACACAC;
+    padding: 0 10px;
     float:left;
-    margin: 0 5%;
+    display: inline-block;
+
 }
 nav a{
     display: inline;
@@ -149,14 +154,28 @@ nav:after{
 
 #container{
     margin: 10% 5%;
+    background: url("../img/background.svg") no-repeat center center;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+#content{
+    margin: 5% 5%;
 }
 section{
     padding: 5px;
     margin:5% 0;
-    background-color: #303030;
-    color: #E0E0E0;
+    color: #303030;
     border-radius: 5px;
     line-height: 1.5em;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+#container-title{
+    font-size: 2.0em;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    font-weight: 100;
     letter-spacing: 2px;
 }
 
