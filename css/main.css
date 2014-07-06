@@ -99,7 +99,9 @@ textarea {
 
 
 body{
-  
+    background: url("../img/background.svg") no-repeat center center;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 h1,h2,h3,h4,h5,h6{
     color: white;
@@ -111,19 +113,26 @@ h1,h2,h3,h4,h5,h6{
    ========================================================================== */
 nav{
     position: fixed;
+    letter-spacing: 2px;
     top:0px;
-    padding: 20px 0 5px 0;
+    padding: 5px 0;
     width: 100%;
     margin:0;
+    display: inline-block;
     background-color: black;
     text-align: center;
+}
+nav h1{
+    float:left;
+    margin-left: 3%;
 }
 nav ul{
     list-style: none;
     display: inline-block;
     text-decoration: none;
-    width: 50%;
     float: right;
+    vertical-align: middle;
+    margin-top: 5%;
     padding: 0;
 }
 nav li{
@@ -153,10 +162,8 @@ nav:after{
    ========================================================================== */
 
 #container{
-    margin: 10% 5%;
-    background: url("../img/background.svg") no-repeat center center;
-    background-attachment: fixed;
-    background-size: 100%;
+    margin: 50% 5%;
+    background: white;
 }
 #content{
     margin: 5% 5%;
@@ -176,6 +183,7 @@ section{
     color: white;
     text-align: center;
     font-weight: 100;
+    font-size: 1em;
     letter-spacing: 2px;
 }
 
@@ -366,5 +374,26 @@ section{
     h2,
     h3 {
         page-break-after: avoid;
+    }
+}
+@media screen and (min-width: 1025px){
+    section{
+        max-width: 75;
+    }
+    #container{
+        margin:0 12.5%;
+    }
+}
+@media screen and (min-width: 675px) and (max-width: 1025){
+    section{
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    #container{
+        margin: 0 1.5%;
+    }
+    section{
+        max-width: 97%;
     }
 }
