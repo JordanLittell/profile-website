@@ -20,7 +20,12 @@ textarea {
 
 html {
     font-size: 1em;
-    line-height: 1.4;
+    vertical-align: center;
+}
+p{
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 1.5em 0;
 }
 
 /*
@@ -95,97 +100,57 @@ textarea {
 
 /* ==========================================================================
    MY STYLING
+   context font size = 16px
+   typographic scale: 6,7,8,9,10,11,12,14,16,18,21,24,36,48,60,72;
    ========================================================================== */
-
+#container{
+    width: 85%;
+    margin:0 7.5%;
+}
 
 body{
+    font-size: 1em;
     background: url("../img/background.svg") no-repeat center center;
     background-attachment: fixed;
     background-size: 100%;
 }
 h1,h2,h3,h4,h5,h6{
-    color: white;
+    color: black;
     font-weight: 100;
+}
+.title{
+    font-size: 4.5em;
+    width: 100%;
+    margin: 3em 0;
+    line-height: 3em;
+    font-weight: 100;
+    letter-spacing: 3px;
+
+}
+h1{
+    font-size: 2em;
+    line-height: 2em;
+    margin: 1.3333em 0;
 }
 
 /* ==========================================================================
    NAVIGATION STYLING 
    ========================================================================== */
-nav{
-    position: fixed;
-    letter-spacing: 2px;
-    top:0px;
-    padding: 5px 0;
-    width: 100%;
-    margin:0;
-    display: inline-block;
-    background-color: black;
-    text-align: center;
-}
-nav h1{
-    float:left;
-    margin-left: 3%;
-}
-nav ul{
-    list-style: none;
-    display: inline-block;
-    text-decoration: none;
-    float: right;
-    vertical-align: middle;
-    margin-top: 5%;
-    padding: 0;
-}
-nav li{
-    color:#ACACAC;
-    padding: 0 10px;
-    float:left;
-    display: inline-block;
 
-}
-nav a{
-    display: inline;
-    text-decoration: none;
-}
-nav li:hover{
-    color: white;
-}
-nav a{
-    color: white;
-}
-nav:after{
-    position: relative;
-    clear:both;
-}
 
 /* ==========================================================================
    CONTAINER AND SECTIONS
    ========================================================================== */
 
-#container{
-    margin: 50% 5%;
-    background: white;
-}
-#content{
-    margin: 5% 5%;
-}
+
 section{
-    padding: 5px;
-    margin:5% 0;
     color: #303030;
+    margin:1.5em 0;
     border-radius: 5px;
-    line-height: 1.5em;
     letter-spacing: 2px;
     font-weight: 100;
 }
-#container-title{
-    font-size: 2.0em;
-    padding: 20px 0;
-    color: white;
-    text-align: center;
-    font-weight: 100;
-    font-size: 1em;
-    letter-spacing: 2px;
-}
+
 
 /* ==========================================================================
    Helper classes
@@ -378,22 +343,28 @@ section{
 }
 @media screen and (min-width: 1025px){
     section{
-        max-width: 75;
+        max-width: 75%;
     }
     #container{
         margin:0 12.5%;
     }
 }
 @media screen and (min-width: 675px) and (max-width: 1025){
+    body{
+        font-size: .8em;
+    }
     section{
-        max-width: 100%;
+        max-width: 90%;
+    }
+    #contain{
+        margin:0 5%;
     }
 }
 @media screen and (max-width: 600px){
     #container{
-        margin: 0 1.5%;
+        margin: 0 5%;
     }
     section{
-        max-width: 97%;
+        max-width: 90%;
     }
 }

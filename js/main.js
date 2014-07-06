@@ -1,3 +1,3 @@
 $(document).ready(function(){
-	$("nav").fitText(1.83,{minFontSize:"20px",maxFontSize:"28px"})
+	$(".title").fitText(1.83,{minFontSize:"40px",maxFontSize:"72px"})
 })
