@@ -107,7 +107,11 @@ textarea {
     width: 85%;
     margin:0 7.5%;
 }
-
+.wrap{
+    margin: 1.5em auto;
+    line-height: 1.5em;
+    max-width: 90%;
+}
 body{
     font-size: 1em;
     background: url("../img/background.svg") no-repeat center center;
@@ -121,17 +125,31 @@ h1,h2,h3,h4,h5,h6{
 .title{
     font-size: 4.5em;
     width: 100%;
-    margin: 3em 0;
-    line-height: 3em;
+    margin: .9999em 0;
+    line-height: .9999em;
     font-weight: 100;
     letter-spacing: 3px;
+}
+
+h1{
+    font-size: 3em; /* 48/16=3  24/48 */
+    line-height: .5em;
+    margin: .5em 0;
+}
+h2{
+    font-size: 2.25em;
+    line-height: .66667em;
+    margin: .66667em 0;
+}
+h3{
+    font-size: 1.3125em;
+    line-height: 1.4286em;
+    margin:1.14286em 0;
+}
+h4{
 
 }
-h1{
-    font-size: 2em;
-    line-height: 2em;
-    margin: 1.3333em 0;
-}
+
 
 /* ==========================================================================
    NAVIGATION STYLING 
@@ -145,7 +163,7 @@ h1{
 
 section{
     color: #303030;
-    margin:1.5em 0;
+    margin:3em 0;
     border-radius: 5px;
     letter-spacing: 2px;
     font-weight: 100;
@@ -341,15 +359,13 @@ section{
         page-break-after: avoid;
     }
 }
-@media screen and (min-width: 1025px){
-    section{
-        max-width: 75%;
+@media screen and (min-width: 700px){
+    .wrap{
+        max-width: 80%;
     }
-    #container{
-        margin:0 12.5%;
-    }
+   
 }
-@media screen and (min-width: 675px) and (max-width: 1025){
+/*@media screen and (min-width: 675px) and (max-width: 1025){
     body{
         font-size: .8em;
     }
@@ -359,12 +375,15 @@ section{
     #contain{
         margin:0 5%;
     }
-}
+}*/
 @media screen and (max-width: 600px){
     #container{
         margin: 0 5%;
     }
-    section{
-        max-width: 90%;
+    .wrap{
+        max-width: 100%;
+    }
+    body{
+        font-size: .9em;
     }
 }
