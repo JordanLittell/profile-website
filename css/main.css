@@ -104,13 +104,40 @@ textarea {
    typographic scale: 6,7,8,9,10,11,12,14,16,18,21,24,36,48,60,72;
    ========================================================================== */
 #container{
-    width: 85%;
-    margin:0 7.5%;
+    width: 90%;
+    margin:0 auto;
 }
+section{
+    color: #303030;
+    margin:3em auto;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+
 .wrap{
     margin: 1.5em auto;
     line-height: 1.5em;
-    max-width: 90%;
+    max-width: 100%;
+}
+.col-l{
+    float:left;
+    width: 40%;
+}
+.col-r{
+    float:left;
+    width: 55%;
+    margin-left: 5%;
+}
+#profile{
+    border-radius: 50%;
+    position: relative;
+
+    max-width: 60%;
+    width: 100%;
+    margin: 0 auto;
+
 }
 body{
     font-size: 1em;
@@ -119,16 +146,20 @@ body{
     background-size: 100%;
 }
 h1,h2,h3,h4,h5,h6{
+    font-family: 'Oswald', sans-serif;
     color: black;
-    font-weight: 100;
+    
 }
 .title{
+    font-family: 'Oswald', sans-serif;
     font-size: 4.5em;
     width: 100%;
-    margin: .9999em 0;
-    line-height: .9999em;
-    font-weight: 100;
+    margin: .3333em 0;
+    line-height: .3333em;
     letter-spacing: 3px;
+    text-align: center;
+    color:#9933ff;
+
 }
 
 h1{
@@ -148,24 +179,104 @@ h3{
 }
 /* who really cares about h4-h6?*/
 
+.wrap:after{
+        content:"";
+        clear:both;
+        display: table;
+    }
+
 
 /* ==========================================================================
-   NAVIGATION STYLING 
+  ICONS
+   ========================================================================== */
+@font-face {
+    font-family: 'icomoon';
+    src:url('../img/icons/icomoon.eot?-sp44cy');
+    src:url('../img/icons/icomoon.eot?#iefix-sp44cy') format('embedded-opentype'),
+        url('../img/icons/icomoon.woff?-sp44cy') format('woff'),
+        url('../img/icons/icomoon.ttf?-sp44cy') format('truetype'),
+        url('../img/icons/icomoon.svg?-sp44cy#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon{
+    font-size: 3em; /* 48/16=3  24/48 */
+    line-height: .5em;
+    margin: .5em 0;
+    transition:color 1.08s ease-in-out ;
+    -webkit-transition: color 1.08s ease-in-out ;
+
+}
+[data-icon]:before {
+        font-family: 'icomoon';
+        content: attr(data-icon);
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+
+/* ==========================================================================
+   NAVIGATION AND LIST STYLING 
+   ========================================================================== */
+
+nav li{
+    display: inline-block;
+    float: left;
+    text-align: center;
+    
+}
+nav li{
+    margin: 0 10%;
+}
+nav h1{
+    display: inline-block;
+}
+nav{
+    display: inline-block;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+#github:hover{
+    color: #98f5ff;
+}
+#linked-in:hover{
+    color:#4682b4;
+}
+#google:hover{
+    color:#ff6347;
+}
+
+/* ==========================================================================
+   LOADING STYLING
    ========================================================================== */
 
 
+#loading{
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+    width:100%;
+    height: 3em;
+    line-height: 0.5em;
+    margin: .5em auto;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 /* ==========================================================================
    CONTAINER AND SECTIONS
    ========================================================================== */
 
 
-section{
-    color: #303030;
-    margin:3em 0;
-    border-radius: 5px;
-    letter-spacing: 2px;
-    font-weight: 100;
-}
 
 
 /* ==========================================================================
@@ -363,17 +474,24 @@ section{
     }
    
 }
-/*@media screen and (min-width: 675px) and (max-width: 1025){
-    body{
-        font-size: .8em;
+@media screen and (max-width: 1140px){
+    #title,h1,h2,h3{
+        text-align: center;
     }
-    section{
-        max-width: 90%;
+    .col-l{
+        float:none;
+        display:block;
+        width: 100%;
+        margin: 0;
     }
-    #contain{
-        margin:0 5%;
+    .col-r{
+        float:none;
+        display: block;
+        width: 100%;
+        margin:0;
     }
-}*/
+
+}
 @media screen and (max-width: 600px){
     #container{
         margin: 0 5%;
