@@ -7,7 +7,7 @@
  */
 
 /* ==========================================================================
-   Base styles: opinionated defaults
+   Base styles: customized for vertical rhythm for base font of 16px and margins of 24px
    ========================================================================== */
 
 html,
@@ -106,7 +106,11 @@ textarea {
 #container{
     width: 90%;
     margin:0 auto;
+    background-color: #FAFAFA;
+    padding: 9em 2em 2em 2em;
+    border-radius: 3px;
 }
+
 section{
     color: #303030;
     margin:3em auto;
@@ -130,25 +134,47 @@ section{
     width: 55%;
     margin-left: 5%;
 }
-#profile{
+#mypic{
+
     border-radius: 50%;
     position: relative;
+    max-width: 5em;
 
-    max-width: 60%;
+    float:left;
     width: 100%;
-    margin: 0 auto;
+    margin: .6em 2em;
 
 }
 body{
     font-size: 1em;
-    background: url("../img/background.svg") no-repeat center center;
-    background-attachment: fixed;
-    background-size: 100%;
+    background-color: #E0E0E0;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2{
     font-family: 'Oswald', sans-serif;
     color: black;
-    
+}
+h4,h3,h5,h6{
+    font-family: 'IM Fell French Canon SC';
+}
+.quote{
+    color: #A1A1A1;
+    font-family: 'IM Fell French Canon SC';
+    font-size: 1.3125em;
+    line-height: 1.4286em;
+    margin:1.14286em 0;
+    text-indent: -18px;
+}
+q:before { 
+content: '\201C'; 
+font-size:200%;
+font-family:'IM Fell French Canon SC' ; 
+color: #7AC5CD;
+} 
+q:after { 
+content: '\201D'; 
+font-size:200%;
+font-family:'IM Fell French Canon SC' ; 
+color: #7AC5CD;
 }
 .title{
     font-family: 'Oswald', sans-serif;
@@ -158,7 +184,6 @@ h1,h2,h3,h4,h5,h6{
     line-height: .3333em;
     letter-spacing: 3px;
     text-align: center;
-    color:#9933ff;
 
 }
 
@@ -177,13 +202,26 @@ h3{
     line-height: 1.4286em;
     margin:1.14286em 0;
 }
+h4{
+    /*font size 18*/
+    font-size: 1.125em;
+    line-height: 1.3333em;
+    margin:1.3333em 0;
+
+}
+h5{
+
+}
+h6{
+
+}
 /* who really cares about h4-h6?*/
 
 .wrap:after{
-        content:"";
-        clear:both;
-        display: table;
-    }
+    content:"";
+    clear:both;
+    display: table;
+}
 
 
 /* ==========================================================================
@@ -222,18 +260,25 @@ h3{
 /* ==========================================================================
    NAVIGATION AND LIST STYLING 
    ========================================================================== */
+#main{
+   width: 100%;
+   background-color: #ECF1EF; 
+   position: fixed;
+   box-shadow: 0 0 3px 0;
+}
 
 nav li{
     display: inline-block;
     float: left;
-    text-align: center;
-    
+    text-align: center; 
+    cursor: pointer;  
+    transition: color .5s ease-in-out;
 }
 nav li{
-    margin: 0 10%;
+    margin: 1.2em 5%;
 }
-nav h1{
-    display: inline-block;
+li:hover{
+    color:#C1CDCD;
 }
 nav{
     display: inline-block;
@@ -242,10 +287,8 @@ nav{
     margin: 0 auto;
 }
 
-
-
 #github:hover{
-    color: #98f5ff;
+    color: #458B74;
 }
 #linked-in:hover{
     color:#4682b4;
@@ -272,9 +315,6 @@ nav{
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-/* ==========================================================================
-   CONTAINER AND SECTIONS
-   ========================================================================== */
 
 
 
@@ -283,6 +323,9 @@ nav{
    Helper classes
    ========================================================================== */
 
+.mobile-icon{
+    display: none;
+}
 /*
  * Image replacement
  */
@@ -446,6 +489,7 @@ nav{
     tr,
     img {
         page-break-inside: avoid;
+
     }
 
     img {
@@ -474,30 +518,48 @@ nav{
     }
    
 }
+@media screen and (max-width: 845px){
+    .mobile-hide{
+        display:none;
+    }
+    .mobile-icon{
+        display:block;
+        padding: 1em;
+        margin: 1em;
+        width: 40px;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+}
 @media screen and (max-width: 1140px){
     #title,h1,h2,h3{
         text-align: center;
     }
+    q{
+        text-align: left;
+    }
     .col-l{
         float:none;
         display:block;
-        width: 100%;
-        margin: 0;
+        width: 90%;
+        margin: 0 auto;
     }
     .col-r{
         float:none;
         display: block;
-        width: 100%;
-        margin:0;
+        width: 90%;
+        margin:0 auto;
     }
 
 }
 @media screen and (max-width: 600px){
     #container{
         margin: 0 5%;
+        padding-top:6em; 
     }
     .wrap{
         max-width: 100%;
+        margin-top: 6em;
     }
     body{
         font-size: .9em;
