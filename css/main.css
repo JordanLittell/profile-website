@@ -90,9 +90,6 @@ a{
     text-decoration: none;
     color: inherit;
 }
-a:before{
-    content: "\e61e";;
-}
 
 
 /* ==========================================================================
@@ -138,7 +135,6 @@ a:before{
 
 .col{
     width: 100%;
-    padding: 0 1em;
 }
 
 .col::first-letter{
@@ -289,7 +285,16 @@ h6{
         line-height: 1;
         -webkit-font-smoothing: antialiased;
     }
+body{
+    -webkit-perspective:800px;
+}
 
+.spin{
+    transition:-webkit-transform 1s ease-in;
+}
+.spin:hover{
+    -webkit-transform: rotate3d(0,1,0,360deg);
+}
 /* ==========================================================================
    NAVIGATION AND LIST STYLING 
    ========================================================================== */
@@ -341,8 +346,12 @@ nav{
 .icon-menu{
     display: -ms-flex;
     display: -webkit-flex ;
+    display: inline-block;
     -webkit-justify-content:space-between;
     -ms-justify-content:space-between;
+}
+.icon-menu li{
+    display: inline-block;
 }
 #github:hover{
     color: #458B74;
@@ -353,9 +362,12 @@ nav{
 #google:hover{
     color:#ff6347;
 }
+#mail:hover{
+    color: #00CED1;
+}
 
 /* ==========================================================================
-   LOADING STYLING
+   ANIMATIONS
    ========================================================================== */
 
 
@@ -363,10 +375,20 @@ nav{
     -webkit-animation:spin 3s linear infinite;
     -moz-animation:spin 3s linear infinite;
     animation:spin 3s linear infinite;
-    width: 0.0001em;
-    height: 0.0001em;
+    width: 1em;
+    font-size: 4em;
+    height: 1em;
     line-height: 0.5em;
     margin: .5em auto;
+}
+@-webkit-keyframes spin{
+    from{-webkit-transform:rotate3d(0,0,1,0deg);}
+    to{-webkit-transform:rotate3d(0,0,1,360deg);}
+
+}
+@keyframes spin{
+    from{-webkit-transform:rotate3d(0,1,0,0deg);}
+    to{-webkit-transform:rotate3d(0,1,0,360deg);}
 }
 
 
@@ -374,6 +396,13 @@ nav{
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+.icon{
+    -webkit-perspective: 500px; /* Chrome, Safari, Opera */
+perspective: 500px;
+    -webkit-transform: rotate3d(0,0,1,360);
+    transform: rotate3d(0,0,1,360)
+}
+
 
 #mobile-menu-img{
     display: none;
@@ -568,10 +597,13 @@ nav{
         page-break-after: avoid;
     }
 }
-@media screen and (min-width: 700px){
+@media screen and (min-width: 845px){
     .wrap{
         max-width: 80%;
         margin: 0 10%;
+    }
+    .col{
+        padding:0 .8em;
     }
    
 }
@@ -594,6 +626,7 @@ nav{
         background-color: #EFEFEF;
         color: #1c1c1c;
     }
+    .col
    
 }
 @media screen and (max-width: 1140px){
@@ -603,33 +636,20 @@ nav{
     q{
         text-align: left;
     }
-    .col-l{
-        float:none;
-        display:block;
-        width: 90%;
-        margin: 0 auto;
-    }
-    .col-r{
-        float:none;
-        display: block;
-        width: 90%;
-        margin:0 auto;
-    }
+   
 
 }
 @media screen and (max-width: 600px){
     #container{
-        margin: 0;
-    }
-    section{
-        margin:0;
+        margin: 5%;
     }
     .wrap{
         width: 100%;
-        margin-top: 6em;
+        margin: 6em 5% 0 0;
     }
     body{
         font-size: .9em;
         margin: 0;
+
     }
 }
