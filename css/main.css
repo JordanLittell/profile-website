@@ -137,15 +137,17 @@ a{
     width: 100%;
 }
 
-.col::first-letter{
+strong{
     font-size: 2em;
+    font-family:'IM Fell French Canon SC', georgia, serif
 }
 #mypic{
     border-radius: 50%;
     max-width: 180px;
     border: 3px solid #EBEBEB;
     width: 100%;
-    margin: .6em auto;
+
+    margin: .6em 30%;
     -webkit-transition: border 1s ease-in-out;
     transition: border 1s ease-in-out;
 
@@ -305,10 +307,19 @@ body{
    position: fixed;
    border-radius: 3px;
 }
+ul{
+    list-style-type: square;
+}
 #main-menu{
     float:right;
     margin-right: 2%;
     width:50%;
+}
+li{
+    -webkit-transition: color .6s ease-in-out;
+}
+.main-item:hover{
+    color: #00BFFF;
 }
 #main-label{
     position: absolute;
@@ -335,7 +346,8 @@ nav li{
     margin: 1.2em 5%;
 }
 li:hover{
-    color: #4876FF;
+    color: #121212;
+    cursor: pointer;
 }
 nav{
     display: inline-block;
@@ -352,6 +364,11 @@ nav{
 }
 .icon-menu li{
     display: inline-block;
+}
+.list-item{
+    font-size: .875em;
+    margin: 0 1.714em;
+    line-height: 1.714em;
 }
 #github:hover{
     color: #458B74;
@@ -626,7 +643,6 @@ perspective: 500px;
         background-color: #EFEFEF;
         color: #1c1c1c;
     }
-    .col
    
 }
 @media screen and (max-width: 1140px){
@@ -636,16 +652,12 @@ perspective: 500px;
     q{
         text-align: left;
     }
-   
-
 }
 @media screen and (max-width: 600px){
-    #container{
-        margin: 5%;
-    }
+    
     .wrap{
         width: 100%;
-        margin: 6em 5% 0 0;
+        margin-top: 6em;
     }
     body{
         font-size: .9em;
