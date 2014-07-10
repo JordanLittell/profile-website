@@ -404,7 +404,41 @@ nav{
    ANIMATIONS
    ========================================================================== */
 
+#welcome{
+    z-index: 200;
+    position: fixed;
+    height: 1000px;
+    background-color: #000;
+    opacity: .9;
+    width: 100%;
+}
+#welcome-button{
+    width: 100%;
+    font-size: 3em;
+    z-index: 300;
+    position: fixed;
+    cursor: pointer;
+    color: #F5F5F5;
+    border-radius: 3px;
+    border: 1px solid #acacac;
+    text-align:center;
+    opacity: .8;
+    -webkit-transition: color 1s ease-in-out ;
+    -webkit-transition: background-color 1s ease-in-out;
+}
+#welcome-button:hover{
+    background-color: #E0E0E0;
+    opacity: .8;
+    color: black;
+}
+#welcome-image{
+    width: 50%;
+    margin: 0 25% 20% 25%;
 
+    -webkit-animation:rotation 3s linear infinite;
+    -moz-animation:rotation 3s linear infinite;
+    animation:rotation 3s linear infinite;
+}
 #loading{
     -webkit-animation:spin 3s linear infinite;
     -moz-animation:spin 3s linear infinite;
@@ -414,6 +448,10 @@ nav{
     height: 1em;
     line-height: 0.5em;
     margin: .5em auto;
+}
+@-webkit-keyframes rotation{
+    from{-webkit-transform: rotate3d(0,1,0,0deg)}
+    to{-webkit-transform: rotate3d(0,1,0,360deg);}
 }
 @-webkit-keyframes spin{
     from{-webkit-transform:rotate3d(0,0,1,0deg);}
@@ -639,6 +677,7 @@ perspective: 500px;
     .col{
         padding:0 .8em;
     }
+    
 
    
 }
@@ -646,6 +685,7 @@ perspective: 500px;
     .mobile-hide{
         display:none;
     }
+    
     .wrap{
         -webkit-flex-direction:column;
     }
@@ -670,6 +710,7 @@ perspective: 500px;
     q{
         text-align: left;
     }
+    
 }
 @media screen and (max-width: 600px){
     
