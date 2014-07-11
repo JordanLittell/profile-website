@@ -418,7 +418,7 @@ nav{
     z-index: 300;
     position: fixed;
     cursor: pointer;
-    color: #F5F5F5;
+    color: #e3e3e3;
     border-radius: 3px;
     border: 1px solid #acacac;
     text-align:center;
@@ -427,9 +427,9 @@ nav{
     -webkit-transition: background-color 1s ease-in-out;
 }
 #welcome-button:hover{
-    background-color: #E0E0E0;
+    background-color: #9c9c9c;
     opacity: .8;
-    color: black;
+
 }
 #welcome-image{
     width: 50%;
