@@ -467,16 +467,17 @@ nav{
 }
 #welcome-image{
     width: 50%;
-    margin: 0 25% 20% 25%;
-    -webkit-animation:rotation 3s linear infinite;
-    -o-animation:rotation 3s linear infinite;
-    -ms-animation:rotation 3s linear infinite;
-    -moz-animation:rotation 3s linear infinite;
-    animation:rotation 3s linear infinite;
+    margin: 0 25% 10% 25%;
+    -webkit-animation:rotation 3s linear 0s infinite;
+    -o-animation:rotation 3s linear 0s infinite;
+    -ms-animation:rotation 3s linear 0s infinite;
+    -moz-animation:rotation 3s linear 0s infinite;
+    animation:rotation 3s linear 0s infinite;
 }
 #loading{
-    -webkit-animation:spin 3s linear infinite;
-    animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear 0s infinite;
+    -webkit-animation:spin 3s linear 0s infinite;
+    animation:spin 3s linear 0s infinite;
     width: 1em;
     font-size: 4em;
     height: 1em;
@@ -484,13 +485,13 @@ nav{
     margin: .5em auto;
 }
 @-webkit-keyframes rotation{
-    from{-webkit-transform: rotate3d(0,1,0,0deg)}
+    from{-webkit-transform: rotate3d(0,1,0,0deg);}
     to{-webkit-transform: rotate3d(0,1,0,360deg);}
 }
-@-webkit-keyframes spin{
-    from{-webkit-transform:rotate3d(0,0,1,0deg);}
-    to{-webkit-transform:rotate3d(0,0,1,360deg);}
 
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
 }
 @-moz-keyframes rotation{
     from{-moz-transform: rotate3d(0,1,0,0deg)}
@@ -499,7 +500,6 @@ nav{
 @-moz-keyframes spin{
     from{-moz-transform:rotate3d(0,0,1,0deg);}
     to{-moz-transform:rotate3d(0,0,1,360deg);}
-
 }
 @-o-keyframes rotation{
     from{-o-transform: rotate3d(0,1,0,0deg)}
@@ -510,13 +510,13 @@ nav{
     to{-o-transform:rotate3d(0,0,1,360deg);}
 
 }
-@keyframes spin{
-    from{-webkit-transform:rotate3d(0,1,0,0deg);}
-    to{-webkit-transform:rotate3d(0,1,0,360deg);}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 @keyframes rotation{
-    from{-o-transform: rotate3d(0,1,0,0deg)}
-    to{-o-transform: rotate3d(0,1,0,360deg);}
+    from{transform: rotateY(0deg);}
+    to{transform: rotateY(360deg);}
 }
 
 
@@ -524,13 +524,6 @@ nav{
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-.icon{
-    -webkit-perspective: 500px; /* Chrome, Safari, Opera */
-    perspective: 500px;
-
-    -webkit-transform: rotate3d(0,0,1,360);
-    transform: rotate3d(0,0,1,360)
-}
 
 
 
