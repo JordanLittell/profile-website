@@ -440,13 +440,14 @@ nav{
     width: 100%;
 }
 #welcome-button{
-    width: 100%;
+    width: 80%;
     font-size: 3em;
+    margin: 0 10%;
     z-index: 300;
     position: fixed;
     cursor: pointer;
     color: #e3e3e3;
-    border-radius: 3px;
+    border-radius: 5px;
     border: 1px solid #acacac;
     text-align:center;
     opacity: .8;
@@ -487,6 +488,10 @@ nav{
 @-webkit-keyframes rotation{
     from{-webkit-transform: rotate3d(0,1,0,0deg);}
     to{-webkit-transform: rotate3d(0,1,0,360deg);}
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
 }
 
 @-moz-keyframes spin {
